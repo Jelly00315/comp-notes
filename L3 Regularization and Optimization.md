@@ -258,4 +258,7 @@ Newton's method becoms:
 $$ 
 W_{t+1} = W_t - H^{-1}\nabla L(W_t)
 $$
-This is a good idea, but again, computation is extremely expensive. Thus standard deep learning training mainly use first-order derivative. 
+This is a good idea, but again, computation is extremely expensive. So we need to do simplication.
+Quasi-Newton methods(BGFS most popular): instead of inverting the Hessian(O($n^3$)), approximate inverse Hessian with rank 1 updates over time(O($n^2$) each)
+or L-BFGS(Limited memory BFGS): does not form/store the full inverse Hessian. Usually works very well in full batch, deterministic mode. But not transfer very well to mini-batch setting.
+In practice, Adam is a good default choice in many cases, and it often works OK with constant learning rate. SGD + Momentum can outperform Adam but may require more tuning of learning rate and schedule. And also can try L_BFGS if able to afford full batch updates(need to disable all sources of noise).

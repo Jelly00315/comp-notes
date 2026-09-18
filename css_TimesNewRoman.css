@@ -1,0 +1,58 @@
+/* =========================================
+   Academic Notes — Times New Roman
+   ========================================= */
+
+/* Main note text */
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-preview-view {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Headings */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.markdown-source-view .cm-header {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* H1 */
+.markdown-preview-view h1,
+.markdown-source-view .cm-header-1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* H2 */
+.markdown-preview-view h2,
+.markdown-source-view .cm-header-2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* H3 */
+.markdown-preview-view h3,
+.markdown-source-view .cm-header-3 {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+/* Keep code monospace */
+code,
+pre,
+.markdown-source-view .cm-inline-code {
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Comfortable reading width */
+.markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-sizer {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
